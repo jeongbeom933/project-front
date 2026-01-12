@@ -3,37 +3,48 @@ const theme = {};
 
 theme.PALLETE = {
     primary: {
-        main: "#ffd159",
-        sub: "#fff4d8",
+        main: "#ff4e37",
+        sub: "#e9edf5",
     },
-    secondary: "#f1ebf5",
-    white: "#fff",
+    secondary: "#018264",
+    white: "#ffffff",
     gray: {
-        100: "#F1EBF5",
-        200: "#AEA8B2",
-        300: "#605866",
-    },
-    error: "#eb6144",
+        100: "#f2f2f2",
+        200: "#e6e6e6",
+        300: "#d9d9d9",
+        400: "#cccccc",
+        500: "#c0c0c0",
+        600: "#b3b3b3",
+        700: "#a6a6a6",
+        800: "#999999",
+        900: "#8d8d8d",
+        910: "#c4c4c4",
+        920: "#666666",
+    }, // 그레이스케일 0~8, footer menu, footer sub 순
+
+    error: "#ff0000",
+    
     background: {
-        white: "#fff",
-        gray: "#f1ebf5"
+        white: "#ffffff",
+        gray: "#f2f2f2"
     }
 }
 
 theme.FONT_SIZE = {
-    h1: "55px",
-    h2: "40px",
-    h3: "30px",
-    h4: "21px",
-    h5: "18px",
-    h6: "16px",
-    h7: "12px",
+    h1: "48px",
+    h2: "36px",
+    h3: "32px",
+    h4: "28px",
+    h5: "24px",
+    h6: "20px",
+    h7: "16px",
+    h8: "12px",
 }
 
 theme.FONT_WEIGHT = {
     thin: "100",
     regular: "400",
-    blod: "800",
+    blod: "700",
 }
 
 theme.FONT_LINE = {
@@ -44,6 +55,27 @@ theme.FONT_LINE = {
     h5: "25px",
     h6: "22px",
     h7: "17px",
-}
+} //수정 안 했음(행간)
 
 export default theme;
+
+theme.FONT_WEIGHT = {
+  // 프리텐다드 계열
+  PRETENDARD: {
+    THIN: "100",
+    EXTRALIGHT: "200",
+    LIGHT: "300",
+    REGULAR: "400",
+    MEDIUM: "500",
+    SEMIBOLD: "600",
+    BOLD: "700",
+    EXTRABOLD: "800",
+    BLACK: "900",
+  },
+
+  // 자이언츠 계열
+  GIANTS: {
+    REGULAR: "400",
+    BOLD: "700",
+  },
+};

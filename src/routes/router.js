@@ -20,6 +20,8 @@ import ReportAndChallenge from "../pages/reportandchallenge/ReportAndChallenge";
 import LoginPage from "../pages/loginandjoin/LoginPage";
 import JoinPage from "../pages/loginandjoin/JoinPage";
 import NotFound from "../pages/notfound/NotFound";
+import MyPosts from "../pages/mypost/MyPosts";
+import MyRecipe from "../pages/myrecipe/MyRecipe";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,20 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <MainContainer />,
+      },
+      {
+        path: "/myposts",
+        element: <MyPosts />,
+        children: [
+          {
+            path: "post/:postId", // 게시물 클릭 시 이동할 주소
+            element: <PostPopUp />,
+          },
+        ],
+      },
+      {
+        path: "/myrecipe",
+        element: <MyRecipe />,
       },
       {
         path: "/myfridge",
@@ -42,11 +58,11 @@ const router = createBrowserRouter([
             element: <FoodRecommendation />,
           },
           {
-            path: "/foodrecommendation/recommendRecipe/:foodId", // :foodId는 동적 파라미터 (예: /recipe/3)
+            path: "recommendRecipe/:foodId", // :foodId는 동적 파라미터 (예: /recipe/3)
             element: <RecommendRecipe />,
           },
           {
-            path: "/foodrecommendation/foodcomplete",
+            path: "foodcomplete",
             element: <FoodComplete />,
           },
         ],
@@ -56,7 +72,7 @@ const router = createBrowserRouter([
         element: <CommunityMain />,
         children: [
           {
-            path: "/communitymain/post/:postId", // 게시물 클릭 시 이동할 주소
+            path: "post/:postId", // 게시물 클릭 시 이동할 주소
             element: <PostPopUp />,
           },
         ],
@@ -70,7 +86,7 @@ const router = createBrowserRouter([
         element: <ReportAndChallenge />,
         children: [
           {
-            path: "/reportandchallenge/post/:postId",
+            path: "post/:postId",
             element: <PostPopUp />,
           },
         ],
@@ -79,10 +95,7 @@ const router = createBrowserRouter([
       { path: "/join", element: <JoinPage /> },
     ],
   },
-  {
-    path: "*",
-    element: <NotFound />,
-  },
+
   {
     path: "/test",
     element: <MyTestLayout />,
@@ -119,6 +132,10 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
 ])
 
-export default router;
+export default router; 

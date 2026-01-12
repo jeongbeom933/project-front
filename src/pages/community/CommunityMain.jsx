@@ -7,7 +7,7 @@ const CommunityMain = () => {
       <h1>커뮤니티 메인 페이지</h1>
       <Outlet/> {/*팝업 게시물 자리*/}
       <div>
-        <Link to={"/communitymain/post/:postId"}>게시물</Link>
+        <Link to={"post/:postId"}>게시물</Link>
       </div>
     </div>
   );

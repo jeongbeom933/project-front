@@ -9,7 +9,7 @@ const ReportAndChallenge = () => {
     <div>
       <h1>리포트&챌린지 페이지</h1>
       <Outlet/> {/* 게시물 팝업 자리 */}
-      <Link to={"/reportandchallenge/post/:postId"}>게시물 팝업</Link>
+      <Link to={"post/:postId"}>게시물 팝업</Link>
       <ChallengeList/>
       <ChallengeCompleteModal/>
       <p>컴포넌트</p>
